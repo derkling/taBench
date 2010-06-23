@@ -40,10 +40,14 @@ monitor-ftrace: $(M_OBJS)
 	gcc $(M_LDFLAGS) $(M_OBJS) -o $@
 
 soft-clean:
-	rm -rf *.o *~
+	rm -rf *.o *~ cscope.*
 
 clean: soft-clean
 	rm -rf nwBench{,-taskaff} monitor{,-ftrace}
+
+index:
+	find `pwd` -regex ".*\.[ch]\(pp\)?" -print > cscope.files
+	cscope -b -q -k
 
 %.o : %.c
 	gcc $(CFLAGS) -c -o $@ $<
