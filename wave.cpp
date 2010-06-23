@@ -5,12 +5,13 @@
  *      Author: betzwlin
  */
 
-#include "wave.h"
-
 #include <stdio.h>
 #include <errno.h>
 #include <strings.h>
 #include <sys/prctl.h>
+
+#include "wave.h"
+#include "taskaff.h"
 
 void wave::kickoff()
 {

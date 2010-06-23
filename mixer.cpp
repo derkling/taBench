@@ -5,12 +5,13 @@
  *      Author: betzwlin
  */
 
-#include "mixer.h"
-
 #include <stdio.h>
 #include <errno.h>
 #include <strings.h>
 #include <sys/prctl.h>
+
+#include "mixer.h"
+#include "taskaff.h"
 
 mixer::mixer(int _index) : index(_index), tid(0)
 {
