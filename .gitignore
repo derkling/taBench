@@ -1,7 +1,9 @@
 *.o
 *.swp
-nwBench
-nwBench-taskaff
-monitor
-monitor-ftrace
+nwBench*KB
+nwBench-taskaff*KB
+monitor*KB
+monitor-ftrace*KB
 cscope.*
+*.txt
+
